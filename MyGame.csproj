@@ -41,7 +41,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Cow.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Game1.cs" />

@@ -7,7 +7,7 @@ namespace MyGame
 {
     public class Player : Support.Texture
     {
-        public Player(Vector2 position) : base("fox", position, new Vector2(0.2f))
+        public Player(Vector2 position) : base("player", position, new Vector2(0.2f))
         {
         }
 
