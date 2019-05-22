@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
@@ -9,24 +10,30 @@ using System.Threading.Tasks;
 namespace MyGame
 {
     class GameState
-        
-
     {
         Player player;
-
+        Background background;
         public GameState()
         {
-            player = new Player(new Vector2(0, 0));
+            player = new Player(new Vector2(0,0));
+            background = new Background(new Vector2(0, 0));
         }
 
         public void Update(GameTime gameTime)
         {
-
+           
+            player.Update(gameTime);
+            background.Update(gameTime);
+            if (Keyboard.GetState().IsKeyDown(Keys.Left)) player.Position.X -= (float)gameTime.ElapsedGameTime.TotalSeconds * 0.5f;
+            { 
+               
+            }
         }
 
         public void Draw(GameTime gameTime)
         {
             player.Draw();
+            background.Draw();
         }
     }
 }

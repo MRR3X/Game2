@@ -17,8 +17,8 @@ namespace MyGame
         public static ContentManager sContent;
         public static Random sRandom = new Random();
 
-        int windowWidth = 1000;
-        int windowHeight = 800;
+        int windowWidth = 1400;
+        int windowHeight = 700;
 
         GameState gameState;
 
