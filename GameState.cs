@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    class GameState
+    class GameState : Game1
     {
         Player player;
         Background background;
+        
+
         public GameState()
         {
             player = new Player(new Vector2(0,0));
@@ -24,16 +26,16 @@ namespace MyGame
            
             player.Update(gameTime);
             background.Update(gameTime);
-            if (Keyboard.GetState().IsKeyDown(Keys.Left)) player.Position.X -= (float)gameTime.ElapsedGameTime.TotalSeconds * 0.5f;
-            { 
-               
-            }
+            
         }
 
         public void Draw(GameTime gameTime)
         {
+
+background.Draw();
             player.Draw();
-            background.Draw();
+            
+            
         }
     }
 }

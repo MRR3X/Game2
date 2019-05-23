@@ -7,7 +7,8 @@ namespace MyGame
 {
     public class Player : Support.Texture
     {
-         
+        internal object spriteBatch;
+
         public Player(Vector2 position) : base("player", position, new Vector2(0.2f,0.2f))
         {
           
