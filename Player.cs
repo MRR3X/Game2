@@ -15,9 +15,7 @@ namespace MyGame
         Support.Texture right;
         Support.Texture active;
         Support.Texture downn;
-
-
-        int result = 5;
+        
         public Player(Vector2 position)
         {
             left = new Support.Texture("Player1", position, new Vector2(0.2f, 0.2f));
@@ -29,7 +27,6 @@ namespace MyGame
             down = new Support.Texture("down", position, new Vector2(0.2f, 0.2f));
             downn = new Support.Texture("downn", position, new Vector2(0.2f, 0.2f));
             active = right;
-
         }
 
         public void Update(GameTime gameTime)
@@ -38,8 +35,6 @@ namespace MyGame
 
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
-
-
                 up.Position = active.Position;
                 active = up;
                 if (Keyboard.GetState().IsKeyDown(Keys.D))
@@ -71,7 +66,6 @@ namespace MyGame
                 { active.Position.X -= (float)gameTime.ElapsedGameTime.TotalSeconds * 0.3f; left.Position = active.Position; active = left; active.Position.Y -= 0.001f; }
             }
 
-
             if (active == left)
             { active.Position.Y -= (float)gameTime.ElapsedGameTime.TotalSeconds * 0.2f; left.Position = active.Position; }
             if (active == right)
@@ -84,7 +78,6 @@ namespace MyGame
             {
                 active.Position = previousPos;
             }
-
         }
 
         public void Draw()
