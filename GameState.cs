@@ -11,8 +11,10 @@ namespace MyGame
 {
     class GameState
     {
+      
         Player player;
         Background background;
+
         Platforms platforms;
         public GameState()
         {
@@ -26,10 +28,6 @@ namespace MyGame
             platforms.Update(gameTime);
             player.Update(gameTime);
             background.Update(gameTime);
-            if (Keyboard.GetState().IsKeyDown(Keys.Left)) player.Position.X -= (float)gameTime.ElapsedGameTime.TotalSeconds * 0.5f;
-            { 
-               
-            }
         }
 
         public void Draw(GameTime gameTime)
@@ -37,7 +35,7 @@ namespace MyGame
             background.Draw();
             platforms.Draw();
             player.Draw();
-            
+           
         }
     }
 }

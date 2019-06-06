@@ -90,7 +90,8 @@ namespace MyGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            sSpriteBatch.Begin();
+
+            sSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             gameState.Draw(gameTime);
             sSpriteBatch.End();
 
