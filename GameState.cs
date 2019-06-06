@@ -14,29 +14,28 @@ namespace MyGame
       
         Player player;
         Background background;
-       
+
+        Platforms platforms;
         public GameState()
         {
-           player = new Player(new Vector2(0, 0));
+            player = new Player(new Vector2(0, -0.50f));
             background = new Background(new Vector2(0, 0));
-          
+            platforms = new Platforms(new Vector2(0, -0.15f));
         }
 
         public void Update(GameTime gameTime)
         {
-         
+            platforms.Update(gameTime);
             player.Update(gameTime);
             background.Update(gameTime);
-            
         }
 
         public void Draw(GameTime gameTime)
         {
-
             background.Draw();
+            platforms.Draw();
             player.Draw();
            
-            
         }
     }
 }

@@ -8,7 +8,6 @@ namespace MyGame
 {
     public class Player
     {
-
         Support.Texture lleft;
         Support.Texture rright;
         Support.Texture up;
@@ -23,6 +22,7 @@ namespace MyGame
         List<Bullet> Bullets = new List<Bullet>();
 
         public Player(Vector2 position)
+
         {
             left = new Support.Texture("Player1", position, new Vector2(0.2f, 0.2f));
             right = new Support.Texture("Player", position, new Vector2(0.2f, 0.2f));

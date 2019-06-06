@@ -9,7 +9,7 @@ namespace MyGame
 {
    public class Background : Support.Texture
     {
-        public Background(Vector2 position) : base("background0", position, new Vector2(4f,2f))
+        public Background(Vector2 position) : base("background10", position, new Vector2(4f,2f))
         {
            
         }
