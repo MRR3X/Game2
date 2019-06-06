@@ -17,7 +17,7 @@ namespace MyGame
         public static ContentManager sContent;
         public static Random sRandom = new Random();
 
-        int windowWidth = 1000;
+        int windowWidth = 1400;
         int windowHeight = 800;
 
         GameState gameState;
@@ -90,7 +90,8 @@ namespace MyGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            sSpriteBatch.Begin();
+
+            sSpriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             gameState.Draw(gameTime);
             sSpriteBatch.End();
 

@@ -11,7 +11,7 @@ namespace MyGame.Support
 
         static public void Setup()
         {
-            sFont = Game1.sContent.Load<SpriteFont>("Arial");
+            sFont = Game1.sContent.Load<SpriteFont>("fArial");
         }
 
         static public void PrintStatus(string msg, Color color)
